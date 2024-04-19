@@ -18,5 +18,15 @@ int main(){
     a->next=b;
     b->next=c;
     c->next=d;
+    //cout<<c->val<<" ";
+
+    //printing the nodes
+    Node*temp=a;
+    while (temp!=NULL)
+    {
+        cout<<temp->val<<" ";
+        temp=temp->next;
+    }
+    
 return 0;
 }
