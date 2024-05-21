@@ -52,7 +52,7 @@ void mergesort(vector<int>&v){
      //merge
      merge(a,b,v);
 
-    //delete th extra spaces
+    //delete the extra spaces
     a.clear();
     b.clear();
 }

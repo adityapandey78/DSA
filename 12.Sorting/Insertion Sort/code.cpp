@@ -13,15 +13,15 @@ int main(){
     //insertion sort
     for(int i=1;i<n;i++){ //2nd selement se start krenge
       int j=i;
-    //   while(j>=1){
-    //     if (arr[j]>=arr[j-1]) break;
-    //     else 
-    //     {
-    //         swap(arr[j],arr[j-1]);
+      while(j>=1){
+        if (arr[j]>=arr[j-1]) break;
+        else 
+        {
+            swap(arr[j],arr[j-1]);
            
-    //     }
-    //     j--;
-    //}
+        }
+        j--;
+    }
 
     while(arr[j]<arr[j-1]&& j>=1){
         swap(arr[j],arr[j-1]);
