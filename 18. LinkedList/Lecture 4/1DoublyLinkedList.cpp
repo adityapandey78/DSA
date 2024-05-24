@@ -11,6 +11,7 @@ class Node{
         this->prev=NULL; //extra for DLL
     }
 };
+
 //iterative display
 void display(Node*head){
     while(head){
