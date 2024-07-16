@@ -18,7 +18,7 @@ void display(Node*head){
         cout<<head->val<<" ";
         head=head->next;
     }
-}
+} 
 void displayrev(Node*head){
     while(head){
         cout<<head->val<<" ";
@@ -60,6 +60,7 @@ int main(){
     displayrec(a);
     cout<<endl;
     displayrecRev(a); //isme head hi pass kr rhe hain fir bhi jaa rha hai
+    //pass to tail hi kiya hai
 
 return 0;
 }
