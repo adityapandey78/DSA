@@ -23,13 +23,13 @@ void display(Node*head){
 
 void displayRec(Node * head){
     if(head==NULL) return;
-    displayRec(head->next);
     cout<<head->val<<" ";
+    displayRec(head->next);
 }
 
 void reverseDisplay(Node* head){
     if(head==NULL) return; //base case
-    displayRec(head->next); //call
+    reverseDisplay(head->next); //call
     cout<<head->val<<" "; //print
 }
 int main(){
@@ -46,6 +46,8 @@ int main(){
     //cout<<c->val<<" ";
 
    display(a); //passing down a as head node
+   displayRec(a);
+   cout<<endl;
    reverseDisplay(a);
 return 0;
 }

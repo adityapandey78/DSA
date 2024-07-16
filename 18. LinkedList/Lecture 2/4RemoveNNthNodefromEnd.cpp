@@ -12,7 +12,7 @@
 // public:
 //     ListNode* removeNthFromEnd(ListNode* head, int n) {
 //          int len=0;
-//         ListNode*temp=head;
+//        ListNode*temp=head;
 //         ListNode*slow=head;
 //         ListNode*fast=head;
 //         while(temp!=NULL){
