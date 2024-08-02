@@ -23,6 +23,19 @@ int main(){
     but above code will delete the stack so not an efficient method
     */
     //method 2: create an extra space temp
-    
+    stack<int> temp;
+    while(st.size()>0){
+        cout<<st.top()<<endl;
+        int x= st.top();
+        st.pop();
+        temp.push(x); //isse hmne ele temp me push kr diya
+    }
+    //now putting elems back into the original stack
+    while(temp.size()>0){
+        int x =temp.top();
+        temp.pop();
+        st.push(x);
+    }
+    cout<<endl<<st.top();
 return 0;
 }
