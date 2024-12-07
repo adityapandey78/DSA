@@ -20,7 +20,13 @@ void displayTree(Node*root){
     displayTree(root->right); //right recursion
     
 }
-
+void displayTree2(Node*root){
+    if (root==NULL) return;
+    displayTree2(root->left); //left recursion
+    cout<<root->val<<" ";
+    displayTree2(root->right); //right recursion
+    
+}
 int size(Node*root){
     if(root==NULL) return 0;
      return 1+size(root->left) +size(root->right);
