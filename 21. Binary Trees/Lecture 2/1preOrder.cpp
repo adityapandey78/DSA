@@ -14,7 +14,7 @@ class Node{
     }
 };
 void preorder(Node*root){
-    if (root==NULL) return;
+    if (root==NULL) return; 
     cout<<root->val<<" "; //work
     preorder(root->left); // call 1
     preorder(root->right); // call 2
