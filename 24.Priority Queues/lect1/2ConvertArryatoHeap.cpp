@@ -4,6 +4,7 @@ using namespace std;
 
 class Maxheap{
     vector<int>hp;
+    int i; //[0,i] yaha tk everything is heapified
     public:
     void upheapify(int ci){
         while(ci>0){
@@ -14,10 +15,7 @@ class Maxheap{
             }else break;
         }
     }
-    void push(int element){
-        hp.push_back(element);
-        upheapify(hp.size()-1); //since we are adding at the end, so last index is size-1
-    }
+    
     void downHeapify(int idx){
         while(idx<hp.size()){
             int lc=2*idx+1;
@@ -57,31 +55,22 @@ class Maxheap{
         }
         cout<<']'<<endl;
     }
-    int peek(){
-        if(empty()) return -1; //or throw exception
-        return hp[0];
+   void maxHeapify(vector<int>v){
+    hp=v;
+    for(int i=1;i<hp.size();i++){
+        upheapify(i);
     }
+   }
 };
 
 int main(){
     Maxheap hp;
-    hp.push(3);
-    hp.push(4);
-    hp.push(11);
-    hp.push(9);
-    hp.push(14);
-    hp.push(-1);
-    hp.push(30);
-    hp.push(44);
-    hp.push(50);
+vector<int>v={9,6,1,19,3,2,8,12,5};
+    hp.maxHeapify(v);
+    hp.display();
+    v.push_back(100);
+    hp.maxHeapify(v);
+    hp.display();
 
-    hp.display();
-    cout << "Max element: " << hp.peek() << endl;
-
-    hp.pop();
-    hp.display();
-    hp.pop();
-    hp.display();
- 
 return 0;
 }
