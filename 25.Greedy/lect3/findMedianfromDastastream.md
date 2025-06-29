@@ -1,5 +1,4 @@
 ```c++
-
 class MedianFinder {
 public:
     priority_queue<int> left_max_heap; // max heap (lower half)
