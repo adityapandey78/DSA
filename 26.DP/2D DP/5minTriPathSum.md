@@ -30,3 +30,27 @@ int f(vector<vector<int>>& arr,int i, int j,vector<vector<int>>&dp){
     }
 };
 ```
+
+```cpp
+
+class Solution {
+public:
+    int minimumTotal(vector<vector<int>>& arr) {
+        int n = arr.size();
+        vector<int> prev = arr[n - 1];  // Initialize with bottom row
+
+        for (int i = n - 2; i >= 0; i--) {
+            vector<int> curr(i + 1, 0);  // Only need i+1 elements
+            for (int j = i; j >= 0; j--) {
+                int down = arr[i][j] + prev[j];
+                int diag = arr[i][j] + prev[j + 1];
+                curr[j] = min(down, diag);
+            }
+            prev = curr;
+        }
+
+        return prev[0];
+    }
+};
+
+```
