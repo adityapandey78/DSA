@@ -54,7 +54,7 @@ int solveTabulation(vector<int>&wt, vector<int>&val, int n, int W) {
     return dp[n-1][W];
 }
 
-// Method 3: Space Optimization
+// Method 3: Space Optimization (Two Arrays)
 int knapsack(vector<int> wt, vector<int> val, int n, int W) {
     // Use only two arrays instead of 2D table
     vector<int> prev(W+1, 0), curr(W+1, 0);
@@ -83,6 +83,31 @@ int knapsack(vector<int> wt, vector<int> val, int n, int W) {
     }
     
     return prev[W];
+}
+
+// Method 4: Most Space Optimized (Single Array)
+int knapsackOptimal(vector<int> wt, vector<int> val, int n, int W) {
+    // Use only one array, traverse from right to left
+    vector<int> dp(W+1, 0);
+    
+    // Base case: initialize for first item
+    for(int w = wt[0]; w <= W; w++) {
+        dp[w] = val[0];
+    }
+    
+    // Process remaining items
+    for(int ind = 1; ind < n; ind++) {
+        // Traverse from right to left to avoid overwriting needed values
+        for(int w = W; w >= 0; w--) {
+            // Take current item (if weight allows)
+            if(wt[ind] <= w) {
+                dp[w] = max(dp[w], val[ind] + dp[w-wt[ind]]);
+            }
+            // If we don't take the item, dp[w] remains unchanged
+        }
+    }
+    
+    return dp[W];
 }
 
 // Usage example:
