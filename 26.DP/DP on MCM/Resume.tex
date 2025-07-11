@@ -1,0 +1,262 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\addtolength{\parskip}{-1.5mm}
+
+% Configure tcolorbox for section headings
+\tcbset{
+    frame code={}
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!40,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=0mm,
+    boxsep=2pt,
+    arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting with gray background
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\vspace{-5pt}]
+
+% New command for section headings with gray background
+\newcommand{\sectionheading}[1]{
+{\large \textbf{\begin{tcolorbox}\textsc{#1}\end{tcolorbox}}}
+\vspace{-5pt}
+}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{flushleft}
+% Uncomment and add your college logo path here
+% \includegraphics[width=2cm]{path/to/your/college/logo.png}
+\vspace{-15pt}
+\end{flushleft}
+
+\begin{center}
+    {\Huge \scshape Aditya Pandey} \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91-838-288-0334 ~ \href{mailto:adityapandey.2402@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{adityapandey.2402@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/adityapandey78/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/adityapandey78}}  ~
+    \href{https://github.com/adityapandey78}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/adityapandey78}}
+    \vspace{-8pt}
+\end{center}
+
+% Horizontal line below heading
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+\vspace{2pt}
+
+%-----------EDUCATION-----------
+\sectionheading{Education}
+\begin{center}
+\begin{tabular}{|p{2.5cm}|p{6.0cm}|p{8.5cm}|p{1.8cm}|}
+\hline
+\centering{\textbf{Year}} & \centering{\textbf{Degree/Certificate}} & \centering{\textbf{Institute}} & \centering{\textbf{CGPA/$\%$}}\\
+\hline
+\centering{2022 - 2026} & \centering{B.Tech in Computer Engineering} & \centering{National Institute of Advanced Manufacturing Technology, Ranchi} & \centering{7.8/10}\\
+\hline
+\centering{2021}& \centering{Intermediate} & \centering{Sanghmitra Public School, Ranchi} & \centering{89$\%$}\\
+\hline
+\centering{2017}& \centering{Matriculation} & \centering{Sanghmitra Public School, Ranchi}  & \centering{94$\%$}\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{-8pt}
+
+%-----------EXPERIENCE-----------
+\sectionheading{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Shamlatech Solutions}{Dec 2024 -- Present}
+      {Frontend Development Intern}{Coimbatore, India}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained frontend applications using \textbf{React} and \textbf{Astro}, ensuring efficient and scalable code.}
+        \resumeItem{Implemented responsive and modern UI designs using \textbf{Bootstrap} and \textbf{TailwindCSS} based on Figma prototypes.}
+        \resumeItem{Collaborated with \textbf{QA testers} to pass test cases, improve code quality, and ensure bug-free releases.}
+        \resumeItem{Followed best coding practices, writing \textbf{clean, maintainable, and high-quality} code for better team collaboration.}
+        \resumeItem{Worked in a \textbf{team environment} using \textbf{GitLab} and version control for smooth development workflows.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Shamlatech Solutions}{Dec 2023 -- Nov 2024}
+      {Social Media Marketing Intern}{Coimbatore, India}
+      \resumeItemListStart
+        \resumeItem{Reached out to projects needing assistance, primarily in tech-related areas.}
+        \resumeItem{Compiled a list of potential startup projects using various sources and managed social media handles.}
+        \resumeItem{Established relationships with clients, leading to positive feedback.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\sectionheading{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{\href{https://github.com/adityapandey78/ScribeSpace}{ScribeSpace}} \href{https://github.com/adityapandey78/ScribeSpace}{\faGithub} $|$ \emph{React, TailwindCSS, Appwrite, Redux, TinyMCE RTE, Vite}}{}
+      \resumeItemListStart
+        \resumeItem{Developed a \textbf{React CRUD} application with \textbf{Redux Toolkit} for scalable state management.}
+        \resumeItem{Integrated \textbf{TinyMCE React} for rich text editing and \textbf{React Hook Form} for advanced form handling.}
+        \resumeItem{Built a responsive UI with \textbf{TailwindCSS}, implementing \textbf{dark mode} and gradient-based design.}
+        \resumeItem{Optimized performance with \textbf{Vite}, \textbf{lazy loading}, \textbf{code splitting}, and efficient state updates.}
+        \resumeItem{Implemented secure \textbf{user authentication} and \textbf{authorization} using \textbf{Appwrite's backend services}.}
+      \resumeItemListEnd
+    \vspace{-8pt}
+    \resumeProjectHeading
+      {\textbf{\href{https://github.com/adityapandey78/Multithreaded-Proxy-Server-Client/}{Multi-Threaded Proxy Server Client}} \href{https://github.com/adityapandey78/Multithreaded-Proxy-Server-Client/}{\faGithub} $|$ \emph{C, Pthread, LRU, Socket Programming}}{}
+      \resumeItemListStart
+        \resumeItem{Built a \textbf{multi-threaded proxy server} in C using \textbf{pthread} for threading and \textbf{semaphores} for concurrency management.}
+        \resumeItem{Applied key \textbf{OS concepts} like \textbf{thread synchronization} and \textbf{mutexes} to efficiently handle client requests.}
+        \resumeItem{Implemented a \textbf{cache system} with the \textbf{LRU algorithm}, improving data retrieval time and reducing network load.}
+        \resumeItem{Strengthened skills in \textbf{network programming} and client-server communication through \textbf{socket programming}.}
+        \resumeItem{Gained valuable experience in \textbf{server architecture} and \textbf{network optimization}, focusing on resource management.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\sectionheading{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Languages}{: C, C++, JavaScript, Typescript, SQL, Java (Basic)} \\
+      \textbf{Developer Tools}{: VS Code, Git, GitHub, GitLab, Vercel} \\
+      \textbf{Tech./Frameworks}{: HTML, CSS, React, Astro, Node.js, ExpressJs, REST APIs, Bootstrap, TailwindCSS, Appwrite} \\
+    }}
+  \end{itemize}
+
+%-----------LEADERSHIP/EXTRACURRICULAR-----------
+\sectionheading{Leadership / Extracurricular}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Training and Placement Cell}{July 2024 -- Present}
+      {Coordinator, Computer Engineering}{NIAMT, Ranchi}
+      \resumeItemListStart
+        \resumeItem{Served as the Placement Coordinator for the inaugural batch of Computer Engineering at NIAMT.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {GDG on Campus Organizer NIAMT}{August 2024 -- Present}
+      {Lead, GDG on Campus: NIAMT}{Google Developer's Group}
+      \resumeItemListStart
+        \resumeItem{Lead the inaugural chapter of GDSC at NIAMT.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Google Developers Group, Ranchi}{May 2024 -- Present}
+      {Core Team Member}{Ranchi}
+      \resumeItemListStart
+        \resumeItem{Collaborated with \textbf{20+ colleges} to organize the state's largest tech event, \textbf{Google DevFest}, with over \textbf{1000+ attendees}.}
+        \resumeItem{Managed event logistics, facilitated smooth crowd handling, and coordinated with \textbf{speakers} to enhance the overall experience.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document}
