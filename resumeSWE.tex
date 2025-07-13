@@ -1,0 +1,264 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{array}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+% Gray box settings for section headings
+\tcbset{
+    frame code={}
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!50,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=0mm,
+    boxsep=3pt,
+    arc=0pt,outer arc=0pt,
+    }
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.9in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting with gray background
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+%----------HEADING----------
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}m{2.5cm} >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}m{7cm}}
+% Logo column
+\includegraphics[width=2.5cm]{niamtLogo.png} & 
+% Name and details column (shifted right with left margin)
+\begin{minipage}[c]{8cm}
+\raggedright
+\hspace{0.5cm}{\Huge \scshape Aditya Pandey} \\[3.5pt]
+\hspace{0.5cm}{\normalsize NIAMT Ranchi, (Formerly NIFFT)\\ }
+\hspace{0.5cm}{\raisebox{-0.1\height}\faPhone\ +91-8382880334 \\[3pt]}
+\end{minipage} &
+% Contact details column
+\begin{minipage}[c]{7cm}
+\raggedleft
+\href{mailto:adityapandey.2402@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ adityapandey.2402@gmail.com} \\[3pt]
+\href{https://www.linkedin.com/in/adityapandey78/}{\raisebox{-0.2\height}\faLinkedin\ {linkedin.com/in/adityapandey78/}}\\  
+\href{https://github.com/adityapandey78}{\raisebox{-0.2\height}\faGithub\ {github.com/adityapandey78}}\\
+\href{https://leetcode.com/u/adityapandey78/}{\raisebox{-0.2\height}\faLink\ {leetcode.com/u/adityapandey78/}}\\
+\end{minipage}
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+\end{center}
+
+% Horizontal line
+\vspace{-5pt}
+\noindent\rule{\textwidth}{1pt}
+\vspace{-15pt}
+
+%-----------EDUCATION-----------
+\vspace{-22pt}
+{\large \textbf{\begin{tcolorbox}\textsc{Education}\end{tcolorbox}}}
+\begin{center}
+\vspace{-2pt}
+\begin{tabular}{|p{2.75cm}|p{6.0cm}|p{8.5cm}|>{\centering\arraybackslash}p{2.cm}|}
+\hline
+\centering{\textbf{Year}} & \centering{\textbf{Degree/Certificate}} & \centering{\textbf{Institute}} & \textbf{CGPA/$\%$}\\
+\hline
+\centering{2022} - 2026 & \centering{B.Tech in Computer Engineering} & \centering{National Institute of Advanced Manufacturing Technology, Ranchi} & 7.8/10\\
+\hline
+\centering{2021}& \centering{Intermediate} & \centering{Sanghmitra Public School, Siwan} & 89$\%$\\
+\hline
+\centering{2019}& \centering{Matriculation} & \centering{Sanghmitra Public School, Siwan}  & 94$\%$\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{-12pt}
+
+%-----------EXPERIENCE-----------
+{\large \textbf{\begin{tcolorbox}\textsc{Experience}\end{tcolorbox}}}
+\vspace{-12pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Shamlatech Solutions}{Dec 24 -- Jun 25}
+      {Frontend Development Intern}{Coimbatore, India}
+      \resumeItemListStart
+        \resumeItem{Architected and maintained scalable frontend applications using \textbf{React} and \textbf{Astro}, serving over \textbf{50K users} with optimized performance.}
+        \resumeItem{Transformed \textbf{Figma designs} into responsive, mobile-first interfaces using \textbf{Bootstrap} and \textbf{TailwindCSS} across multiple device breakpoints.}
+        \resumeItem{Enhanced cross-platform user experience by achieving \textbf{85-90\%} page performance scores through code optimization and QA testing protocols.}
+        \resumeItem{Streamlined development processes by implementing \textbf{Agile best practices} and Git workflows, reducing deployment time by \textbf{35\%}.}
+        \resumeItem{Facilitated seamless project delivery through \textbf{GitLab} version control and cross-functional team coordination in fast-paced environment.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\vspace{-5pt}
+%-----------PROJECTS-----------
+\begin{tcolorbox}\textbf{Projects}\end{tcolorbox}
+\vspace{-25pt}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{\href{https://github.com/adityapandey78/ScribeSpace}{ScribeSpace}} \href{https://github.com/adityapandey78/ScribeSpace}{\faGithub} $|$ \emph{React, TailwindCSS, Appwrite, Redux, TinyMCE RTE, Vite}}{}
+      \resumeItemListStart
+      \vspace{4pt}
+        \resumeItem{Developed a \textbf{React CRUD} application with \textbf{Redux Toolkit} for scalable state management.}
+        \resumeItem{Integrated \textbf{TinyMCE React} for rich text editing and \textbf{React Hook Form} for advanced form handling.}
+        \resumeItem{Built a responsive UI with \textbf{TailwindCSS}, implementing \textbf{dark mode} and gradient-based design.}
+        \resumeItem{Optimized performance with \textbf{Vite}, \textbf{lazy loading}, \textbf{code splitting}, and efficient state updates.}
+        \resumeItem{Implemented secure \textbf{user authentication} and \textbf{authorization} using \textbf{Appwrite's backend services}.}
+      \resumeItemListEnd
+    \vspace{-12pt}
+    \resumeProjectHeading
+      {\textbf{\href{https://github.com/adityapandey78/WinChatApp}{WinChatApp: Multi-threaded TCP Chat System}} \href{https://github.com/adityapandey78/Windows-Chat-App}{\faGithub} $|$ \emph{C++, Winsock2, TCP/IP, Visual Studio, Multi-threading}}{}
+      \resumeItemListStart
+      \vspace{4pt}
+        \resumeItem{Built high-performance \textbf{multi-threaded chat server} using \textbf{C++17} and \textbf{Winsock2 API} with concurrent clients.}
+        \resumeItem{Implemented \textbf{TCP/IP socket programming} for \textbf{real-time message broadcasting} across multiple clients.}
+        \resumeItem{Designed \textbf{thread-safe concurrency model} using \textbf{std::thread} with proper resource management and lifecycle control.}
+        \resumeItem{Developed dual-threaded client architecture for enhanced user experience and optimal system responsiveness.}
+      \resumeItemListEnd
+    \vspace{-12pt}
+    \resumeProjectHeading
+      {\textbf{\href{https://github.com/adityapandey78/Multithreaded-Proxy-Server-Client/}{Multi-Threaded Proxy Server Client}} \href{https://github.com/adityapandey78/Multithreaded-Proxy-Server-Client/}{\faGithub} $|$ \emph{C, Pthread, LRU, Socket Programming}}{}
+      \resumeItemListStart
+      \vspace{4pt}
+        \resumeItem{Built in C using \textbf{pthread} for threading and \textbf{semaphores} for concurrency management.}
+        \resumeItem{Applied key \textbf{OS concepts} like \textbf{thread synchronization} and \textbf{mutexes} to efficiently handle client requests.}
+        \resumeItem{Implemented a \textbf{cache system} with the \textbf{LRU algorithm}, improving data retrieval time and reducing network load.}
+        \resumeItem{Strengthened skills in \textbf{network programming} and client-server communication through \textbf{socket programming}.}
+        \resumeItem{Gained valuable experience in \textbf{server architecture} and \textbf{network optimization}, focusing on resource management.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+
+\begin{tcolorbox}\textbf{Technical Skills}\end{tcolorbox}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Languages}{: C, C++, JavaScript, Typescript, SQL, Java (Basic)} \\
+      \textbf{Developer Tools}{: VS Code, Git, GitHub, GitLab, Vercel} \\
+      \textbf{Tech./Frameworks}{: HTML, CSS, React, Astro, Node.js, ExpressJs, REST APIs, Bootstrap, TailwindCSS, Appwrite} \\
+       \textbf{Relevant Coursework}{: Operating system, Computer networks, DBMS, Data Structures \& Algorithms, Design \& Analysis of Algorithm, Computer Organization \& Architecture, Soft Computing, Optimization Methods, Software Engg, Object-Oriented Programming, Discrete Math., Automata Theory, Digital Manufacturing} \\
+    }}
+  \end{itemize}
+
+%-----------ACHIEVEMENTS-----------
+\begin{tcolorbox}\textbf{Achievements}\end{tcolorbox}
+\vspace{-10pt}
+\resumeSubHeadingListStart
+    \resumeItem{Awarded \textbf{50 Days LeetCode Badge} - achieved by top \textbf{6.9\%} of LeetCoders for solving problems consistently for 50+ days in 2024.}
+    \resumeItem{Won \textbf{1st place} in inter-college \textbf{Business Plan Competition} at NIAMT, demonstrating entrepreneurial and presentation skills.}
+    \resumeItem{Solved \textbf{350+} DSA problems across multiple platforms with focus on optimization techniques.}
+    \resumeItem{Contributed to \textbf{multiple startups} remotely in growth and partnership roles, gaining fast-paced work experience.}
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP/EXTRACURRICULAR-----------
+\begin{tcolorbox}\textbf{Leadership / Extracurricular}\end{tcolorbox}
+\vspace{-10pt}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {\small GDG on Campus Organizer NIAMT}{\small Aug 24 -- Aug 25}
+      {}{}
+      \vspace{-14pt}
+      \resumeItemListStart
+        \resumeItem{\small Led the inaugural GDG chapter at NIAMT.}
+      \resumeItemListEnd
+      \vspace{3pt}
+    \resumeSubheading
+      {\small Core Team Member, Google Developers Group, Ranchi}{\small May 24 -- Jun 25}
+      {}{}
+      \vspace{-14pt}
+      \resumeItemListStart
+        \resumeItem{\small Organized Google DevFest with \textbf{1000+ attendees} across \textbf{20+ colleges}, managing logistics and speaker coordination.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
